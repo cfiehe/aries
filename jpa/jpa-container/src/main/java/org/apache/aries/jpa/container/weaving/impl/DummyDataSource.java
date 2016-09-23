@@ -62,6 +62,9 @@ public final class DummyDataSource implements DataSource {
             if (type == ResultSet.class) {
                 return createProxy(classLoader, ResultSet.class);
             }
+            if (type == PreparedStatement.class) {
+                return createProxy(classLoader, PreparedStatement.class);
+            }
             return null;
         }
 
